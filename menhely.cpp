@@ -41,26 +41,28 @@ void keres(vector<Allat> v) {
 	cin>>attr;
 	cout<<"Ertek: ";
 	cin>>ert;
-
+	int db = 0;
 	for (Allat a : v) {
             string mezo = (a==attr);
             if (mezo == ert) {
                   cout<<a;
+		  db++;
             }
 	}
+	cout << "A rekordok szama: " << db << endl;
 }
 
 
 
 int main() {
 	ifstream in("menhely.txt");
-    vector<Allat> v;
-    Allat a;
+    	vector<Allat> v;
+    	Allat a;
 	while (in>>a) {
 		v.push_back(a);
 	}
-	keres(v);
-    in.close();
+    	keres(v);
+    	in.close();
 
 	return 0;
 }
