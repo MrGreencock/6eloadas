@@ -19,7 +19,7 @@ void operator<<(ostream& out, Allat& a) {
 	cout << a.nev << ": " <<a.faj<< ", " << a.kor << ", " << a.szin <<endl;
 }
 
-string operator==(struct Allat& a, string s) {
+string operator==(Allat& a, string s) {
       if (s == "név") {
             return a.nev;
       }
